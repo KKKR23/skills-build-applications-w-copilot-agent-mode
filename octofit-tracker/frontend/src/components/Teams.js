@@ -5,7 +5,7 @@ const Teams = () => {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/api/teams')
+    fetch('https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/api/teams/')
       .then(response => response.json())
       .then(data => setTeams(data));
   }, []);

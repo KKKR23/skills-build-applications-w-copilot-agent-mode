@@ -5,7 +5,7 @@ const Activities = () => {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/api/activities')
+    fetch('https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/api/activities/')
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);

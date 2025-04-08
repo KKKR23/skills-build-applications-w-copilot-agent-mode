@@ -5,7 +5,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/api/users')
+    fetch('https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/api/users/')
       .then(response => response.json())
       .then(data => setUsers(data));
   }, []);

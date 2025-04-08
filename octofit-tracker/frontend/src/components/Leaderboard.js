@@ -5,7 +5,7 @@ const Leaderboard = () => {
   const [leaders, setLeaders] = useState([]);
 
   useEffect(() => {
-    fetch('https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/api/leaderboard')
+    fetch('https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/api/leaderboard/')
       .then(response => response.json())
       .then(data => setLeaders(data));
   }, []);
