@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.decorators import api_view
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 from .models import users, teams, activity, leaderboard, workouts
 
@@ -29,11 +30,13 @@ class WorkoutView(APIView):
         workout_list = list(workouts.find())
         return Response(workout_list, status=status.HTTP_200_OK)
 
-def api_root(request):
+@api_view(['GET'])
+def api_root(request, format=None):
+    base_url = 'https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/'
     return Response({
-        'users': '/users/',
-        'teams': '/teams/',
-        'activity': '/activity/',
-        'leaderboard': '/leaderboard/',
-        'workouts': '/workouts/'
+        'users': base_url + 'users/',
+        'teams': base_url + 'teams/',
+        'activity': base_url + 'activity/',
+        'leaderboard': base_url + 'leaderboard/',
+        'workouts': base_url + 'workouts/'
     })
