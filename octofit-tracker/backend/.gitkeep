@@ -1,0 +1,7 @@
+## Install React Router DOM
+
+To install the stable version of `react-router-dom`, navigate to the `octofit-tracker/frontend` directory and run the following command:
+
+```bash
+npm install react-router-dom@latest
+```
