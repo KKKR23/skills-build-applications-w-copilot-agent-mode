@@ -130,3 +130,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Allow all origins for CORS
 CORS_ALLOW_ALL_ORIGINS = True
+
+# Add codespace Django REST API endpoint suffix
+CODESPACE_API_SUFFIX = 'https://obscure-train-97jj4vvgg9453pj7r-8000.app.github.dev/'
